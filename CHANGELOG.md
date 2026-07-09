@@ -29,6 +29,7 @@ Note: Can be used with `oxsecurity/megalinter@beta` in your GitHub Action mega-l
 - Fixes
 
   - Keep the Docker Pulls badge in `docs/index.md` in sync by having `docker_stats.py` also update the hardcoded badge total in `.automation/build.py`
+  - Honor `EXCLUDED_DIRECTORIES` and `ADDITIONAL_EXCLUDED_DIRECTORIES` in changed-files mode (`VALIDATE_ALL_CODEBASE: false`), so files inside excluded directories are pruned from the `git diff` file list the same way they are during full-codebase validation ([#8360](https://github.com/oxsecurity/megalinter/issues/8360))
 
 - Reporters
 
